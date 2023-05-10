@@ -8,6 +8,8 @@
 <title>**MY PROFILE HOME**</title>
 </head>
 <body>
+	<%@ include file="include/header.jsp" %>
+	
 	<center>
 	<table border="0" cellspacing="0" cellpadding="20" width="75%">
 		<tr>
@@ -22,6 +24,7 @@
 		</tr>
 		<tr>
 			<td>
+				<center>
 				<table border="0" cellspacing="0" cellpadding="10" width="80%">
 					<tr>
 						<td class="skillbox"><span class="skilltext01">J</span><span class="skilltext02">AVA</span></td>
@@ -43,6 +46,7 @@
 						<td class="skillbox"><span class="skilltext01">D</span><span class="skilltext02">ATABASE</span></td>
 					</tr>
 				</table>
+				</center>
 			</td>
 		</tr>
 	</table>
