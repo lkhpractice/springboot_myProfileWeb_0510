@@ -5,9 +5,9 @@ body {
 	padding: 0;
 }
 
-tr.hearline {
+tr.headerline {
 	height: 50px;
-	background-color: #EDC6B1;
+	background-color: #b8c7ad;
 }
 
 td.headertext {

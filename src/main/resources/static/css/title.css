@@ -7,7 +7,7 @@ body {
 
 span.title01 {
 	font-size: 70px;
-	color : #739dc4;
+	color : #7aa3c7;
 	font-family: Arial;
 	font-weight: bold;
 }
@@ -21,7 +21,7 @@ span.title02 {
 
 span.skilltext01 {
 	font-size: 60px;
-	color: #739dc4;
+	color : #7aa3c7;
 	font-family: Arial;
 	font-weight: bold;
 }
@@ -43,5 +43,5 @@ td.skillbox {
 
 td.imgbox {
 	text-align: center;
-	background-color: #ccd9e6;
+	background-color: #f5e2d8;
 }
