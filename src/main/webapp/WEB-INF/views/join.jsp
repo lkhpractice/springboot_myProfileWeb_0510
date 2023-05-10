@@ -28,11 +28,11 @@
 			<td>
 				<center>
 				<table border="0" cellspacing="0" cellpadding="10" width="80%">
-					<form action="joinOk" method="post">
 					<tr>
 						<td class="contentbox">
 							<center>
 								<table border="0" cellspacing="0" cellpadding="10">
+								<form action="joinOk" method="post">
 									<tr>
 										<td class="content_text">아 이 디 : </td>
 										<td><input class="inputbox01" type="text" name="mid"></td>
@@ -59,11 +59,11 @@
 											<input class="content_btn01" type="button" value="로그인" onabort="script:window.location.href='login'">
 										</td>
 									</tr>
+									</form>
 								</table>
 							</center>
 						</td>
-					</tr>
-					</form>
+					</tr>	
 				</table>
 				</center>
 			</td>
