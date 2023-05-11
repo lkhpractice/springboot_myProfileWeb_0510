@@ -80,7 +80,7 @@ public class WebController {
 		return "joinOk";
 	}
 	
-	@RequestMapping(value = "loginOk")
+	@RequestMapping(value = "/loginOk")
 	public String loginOk(HttpServletRequest request, Model model, HttpSession session) {
 		
 		String mid = request.getParameter("mid");
@@ -100,4 +100,12 @@ public class WebController {
 		
 		return "loginOk";
 	}
+	
+	@RequestMapping(value = "/logout")
+	public String logout(HttpSession session) {
+		session.invalidate(); // 세션 삭제 -> 로그아웃
+		
+		return "redirect:login";
+	}
+	
 }
