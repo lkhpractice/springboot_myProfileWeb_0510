@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="/resources/css/title.css">
 <link rel="stylesheet" href="/resources/css/content.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+<script type="text/javascript" src="/resources/js/join.js"></script>
 <title>**MY PROFILE HOME**</title>
 </head>
 <body>
@@ -32,35 +33,36 @@
 						<td class="contentbox">
 							<center>
 								<table border="0" cellspacing="0" cellpadding="10">
-								<form action="joinOk" method="post">
 									<tr>
 										<td class="content_text">아 이 디 : </td>
-										<td><input class="inputbox01" type="text" name="bid" value="${memberDto.mid }" readonly="readonly"></td>
+										<td><input class="inputbox01" type="text" name="mid" value="${memberDto.mid }" readonly="readonly"></td>
 									</tr>
 									<tr>
-										<td class="content_text">글 쓴 이 : </td>
-										<td><input class="inputbox01" type="text" name="bname" value="${memberDto.mname }"></td>
+										<td class="content_text">비밀번호 : </td>
+										<td><input class="inputbox01" type="text" name="mpw" value="${memberDto.mpw }" readonly="readonly"></td>
 									</tr>
 									<tr>
-										<td class="content_text">질문내용 : </td>
-										<td><textarea class="textareabox" rows="8" cols="30" name="bcontent"></textarea></td>
+										<td class="content_text">이&nbsp;&nbsp;&nbsp;&nbsp;름 : </td>
+										<td><input class="inputbox01" type="text" name="mname" value="${memberDto.mname }" readonly="readonly""></td>
 									</tr>
-									
 									<tr>
 										<td class="content_text">이 메 일 : </td>
-										<td><input class="inputbox01" type="text" name="bemail" value="${memberDto.memail }"></td>
+										<td><input class="inputbox01" type="text" name="memail" value="${memberDto.memail }" readonly="readonly""></td>
+									</tr>
+									<tr>
+										<td class="content_text">가 입 일 : </td>
+										<td><input class="inputbox01" type="text" name="mdate" value="${memberDto.mdate }" readonly="readonly"></td>
 									</tr>
 									<tr>
 										<td colspan="2" align="center">
-											<input class="content_btn01" type="submit" value="질문하기">&nbsp;&nbsp;
-											<input class="content_btn01" type="button" value="글목록" onabort="script:window.location.href='list'">
+											<input class="content_btn01" type="button" value="정보수정" onclick="script:window.location.href='modify'">&nbsp;&nbsp;
+											<input class="content_btn01" type="button" value="수정취소" onclick="script:window.location.href='index'">
 										</td>
 									</tr>
-									</form>
 								</table>
 							</center>
 						</td>
-					</tr>
+					</tr>	
 				</table>
 				</center>
 			</td>

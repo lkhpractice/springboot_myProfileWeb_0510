@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.lkhpractice.home.dao.IDao;
+import com.lkhpractice.home.dto.MemberDto;
 
 @Controller
 public class WebController {
@@ -43,7 +44,20 @@ public class WebController {
 	}
 	
 	@RequestMapping(value = "/question")
-	public String question() {
+	public String question(HttpSession session, Model model) {
+		
+		String sessionId = (String) session.getAttribute("sessionId");
+		
+		MemberDto memberDto = new MemberDto("GUEST", "GUEST", "비회원", "guest@guest.com", " ");
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		if(sessionId == null) {
+			model.addAttribute("memberDto", memberDto);
+		} else {
+			model.addAttribute("memberDto", dao.getMemberInfo(sessionId));
+		}
+		
 		return "question";
 	}
 	
@@ -108,4 +122,32 @@ public class WebController {
 		return "redirect:login";
 	}
 	
+	@RequestMapping(value = "/modify")
+	public String modify(HttpSession session, Model model) {
+		
+		String sessionId = (String) session.getAttribute("sessionId");
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		model.addAttribute("memberDto", dao.getMemberInfo(sessionId));
+		
+		return "modifyForm";
+	}
+	
+	@RequestMapping(value = "modifyOk")
+	public String modifyOk(HttpServletRequest request, Model model) {
+		
+		String mid = request.getParameter("mid");
+		String mpw = request.getParameter("mpw");
+		String mname = request.getParameter("mname");
+		String memail = request.getParameter("memail");
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		dao.modifyMemberDao(mid, mpw, mname, memail);
+		
+		model.addAttribute("memberDto", dao.getMemberInfo(mid)); // 수정이 된 후 회원 정보
+		
+		return "modifyOk";
+	}
 }
