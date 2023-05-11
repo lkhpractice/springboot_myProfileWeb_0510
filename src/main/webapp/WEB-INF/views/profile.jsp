@@ -34,9 +34,9 @@
 								<table border="0" cellspacing="0" cellpadding="10">
 									<tr>
 										<td class="main_text">
-										안녕하세요 백엔드 개발자 이규현입니다.<br>
+										안녕하세요 이 홈페이지를 개발한 이규현입니다.<br>
 										보시고 계신 페이지는 Spring Boot Framework로 개발되었습니다.<br>
-										궁금하신 점은 QUESTION 질문 게시판을 이용해주세요.
+										궁금하신 점은 QUESTION 질문 게시판을 이용해 주세요.
 										</td>
 									</tr>
 								</table>
