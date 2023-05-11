@@ -48,7 +48,11 @@
 									<tr>
 										<td class="content_text">
 											${memberName }님 회원가입을 축하드립니다!<br>
-											가입하신 아이디는 ${memberId }입니다.<br><br>
+											가입하신 아이디는 ${memberId }입니다.<br>
+										</td>
+									</tr>
+									<tr>
+										<td align="center">
 											<input class="content_btn01" type="button" value="로그인 바로가기" onclick="script: window.location.href='login'">
 										</td>
 									</tr>

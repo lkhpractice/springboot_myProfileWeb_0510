@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 td.contentbox {
-	background-color: #dee6e9;
+	background-color: #dee7e9;
 	height: 510px;
 	line-height: 30px;
 }
@@ -11,7 +11,7 @@ td.content_text {
 	font-family: 'NanumSquare', sans-serif;
 	font-weight: bold;
 	color: #3e6b95;
-	text-align: center;
+	text-align: right;
 }
 
 td.main_text {
@@ -50,7 +50,7 @@ input.content_btn01:hover {
 	background-color: #3a71b4;
 	width: 180px;
 	height: 40px;
-	font-family: malgun;
+	font-family: 'NanumSquare', sans-serif;
 	font-size: 20px;
 	color: #ffffff;
 	font-weight: bold;
