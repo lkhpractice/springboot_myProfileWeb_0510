@@ -3,6 +3,7 @@
 td.contentbox {
 	background-color: #dee6e9;
 	height: 510px;
+	line-height: 30px;
 }
 
 td.content_text {
@@ -10,7 +11,7 @@ td.content_text {
 	font-family: 'NanumSquare', sans-serif;
 	font-weight: bold;
 	color: #3e6b95;
-	text-align: right;
+	text-align: center;
 }
 
 td.main_text {

@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="/resources/css/title.css">
 <link rel="stylesheet" href="/resources/css/content.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+<script type="text/javascript" src="/resources/js/join.js"></script>
 <title>**MY PROFILE HOME**</title>
 </head>
 <body>
@@ -32,34 +33,34 @@
 						<td class="contentbox">
 							<center>
 								<table border="0" cellspacing="0" cellpadding="10">
-								<form action="joinOk" method="post">
-									<tr>
-										<td class="content_text">아 이 디 : </td>
-										<td><input class="inputbox01" type="text" name="mid"></td>
-									</tr>
-									<tr>
-										<td class="content_text">비밀번호 : </td>
-										<td><input class="inputbox01" type="password" name="mpw"></td>
-									</tr>
-									<tr>
-										<td class="content_text">비밀번호확인 : </td>
-										<td><input class="inputbox01" type="password" name="mpw_check"></td>
-									</tr>
-									<tr>
-										<td class="content_text">이&nbsp;&nbsp;&nbsp;&nbsp;름 : </td>
-										<td><input class="inputbox01" type="text" name="mname"></td>
-									</tr>
-									<tr>
-										<td class="content_text">이 메 일 : </td>
-										<td><input class="inputbox01" type="text" name="memail"></td>
-									</tr>
-									<tr>
-										<td colspan="2" align="center">
-											<input class="content_btn01" type="submit" value="가입완료">&nbsp;&nbsp;
-											<input class="content_btn01" type="button" value="로그인" onabort="script:window.location.href='login'">
-										</td>
-									</tr>
-									</form>
+									<form action="joinOk" method="post" name="join_frm">
+										<tr>
+											<td class="content_text">아 이 디 : </td>
+											<td><input class="inputbox01" type="text" name="mid"></td>
+										</tr>
+										<tr>
+											<td class="content_text">비밀번호 : </td>
+											<td><input class="inputbox01" type="password" name="mpw"></td>
+										</tr>
+										<tr>
+											<td class="content_text">비밀번호확인 : </td>
+											<td><input class="inputbox01" type="password" name="mpw_check"></td>
+										</tr>
+										<tr>
+											<td class="content_text">이&nbsp;&nbsp;&nbsp;&nbsp;름 : </td>
+											<td><input class="inputbox01" type="text" name="mname"></td>
+										</tr>
+										<tr>
+											<td class="content_text">이 메 일 : </td>
+											<td><input class="inputbox01" type="text" name="memail"></td>
+										</tr>
+										<tr>
+											<td colspan="2" align="center">
+												<input class="content_btn01" type="button" value="가입완료" onclick="joinCheck()">&nbsp;&nbsp;
+												<input class="content_btn01" type="button" value="로그인" onclick="script:window.location.href='login'">
+											</td>
+										</tr>
+										</form>
 								</table>
 							</center>
 						</td>
