@@ -27,7 +27,7 @@
 	</update>
 	
 	<insert id="questionWriteDao">
-		INSERT INTO web_board(bnum, bid, bname, bcontent, bemail) VALUES(webboard_seq.nextval, #{param1}, #{param2}, #{param3}, #{param}
+		INSERT INTO web_board(bnum, bid, bname, bcontent, bemail) VALUES(webboard_seq.nextval, #{param1}, #{param2}, #{param3}, #{param4})
 	</insert> 
 	
 	<select id="questionListDao" resultType="com.lkhpractice.home.dto.BoardDto">

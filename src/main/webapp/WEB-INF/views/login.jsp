@@ -44,14 +44,14 @@
 									<tr>
 										<td colspan="2" align="center">
 											<input class="content_btn01" type="submit" value="로그인">&nbsp;&nbsp;
-											<input class="content_btn01" type="button" value="회원가입" onabort="script:window.location.href='join'">
+											<input class="content_btn01" type="button" value="회원가입" onclick="script:window.location.href='join'">
 										</td>
 									</tr>
 									</form>
 								</table>
 							</center>
 						</td>
-					</tr>				
+					</tr>
 				</table>
 				</center>
 			</td>
