@@ -174,10 +174,9 @@ public class WebController {
 	
 	@RequestMapping(value = "/list")
 	public String list(Model model, Criteria criteria, HttpServletRequest request) {
-		
 		int pageNum = 0;
 		
-		if(request.getParameter("pageNum") == null) {
+		if(request.getParameter("pageNum") == null) {		
 			pageNum = 1;
 			criteria.setPageNum(pageNum);
 		} else {
@@ -187,14 +186,16 @@ public class WebController {
 		
 		IDao dao = sqlSession.getMapper(IDao.class);
 		
-		int total = dao.boardAllCountDao();	// 모든 글의 개수
+		int total = dao.boardAllCountDao(); // 모든 글의 개수
 		
-		PageDto pageDto = new PageDto(criteria, total);
+		PageDto pageDto = new PageDto(criteria, total);	
 		
 		List<BoardDto> boardDtos = dao.questionListDao(criteria.getAmount(), pageNum);
 		
 		model.addAttribute("pageMaker", pageDto);
 		model.addAttribute("boardDtos", boardDtos);
+		model.addAttribute("currPage", pageNum);
+		
 		return "list";
 	}
 	
