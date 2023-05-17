@@ -173,7 +173,17 @@ public class WebController {
 	}
 	
 	@RequestMapping(value = "/list")
-	public String list(Model model, Criteria criteria) {
+	public String list(Model model, Criteria criteria, HttpServletRequest request) {
+		
+		int pageNum = 0;
+		
+		if(request.getParameter("pageNum") == null) {
+			pageNum = 1;
+			criteria.setPageNum(pageNum);
+		} else {
+			pageNum = Integer.parseInt(request.getParameter("pageNum"));
+			criteria.setPageNum(pageNum);
+		}
 		
 		IDao dao = sqlSession.getMapper(IDao.class);
 		
@@ -181,8 +191,10 @@ public class WebController {
 		
 		PageDto pageDto = new PageDto(criteria, total);
 		
-		model.addAttribute("pageMaker", pageDto);
+		List<BoardDto> boardDtos = dao.questionListDao(criteria.getAmount(), pageNum);
 		
+		model.addAttribute("pageMaker", pageDto);
+		model.addAttribute("boardDtos", boardDtos);
 		return "list";
 	}
 	

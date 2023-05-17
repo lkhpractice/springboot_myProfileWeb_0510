@@ -75,7 +75,7 @@
 												<a href="list?pageNum=${pageMaker.startPage-5 }">◀</a>&nbsp;&nbsp;&nbsp;
 											</c:if>
 											<c:forEach begin="${pageMaker.startPage }" end="${pageMaker.endPage }" var="num">
-												${num }&nbsp;&nbsp;&nbsp;
+												<a href="list?PageNum=${num }">${num }</a>&nbsp;&nbsp;&nbsp;
 											</c:forEach>
 											<c:if test="${pageMaker.next }">
 												<a href="list?pageNum=${pageMaker.startPage+5 }">▶</a>
