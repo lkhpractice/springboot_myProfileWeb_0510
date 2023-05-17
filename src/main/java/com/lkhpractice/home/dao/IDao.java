@@ -19,5 +19,6 @@ public interface IDao {
 	public List<BoardDto> questionListDao(); // 모든 글목록 가져오기
 	public BoardDto contentViewDao(String bnum); // 리스트에서 선택한 특정 글 가져오기
 	public void deleteDao(String bnum); // 글삭제
+	public int boardAllCountDao();	// 모든 글의 개수를 반환
 	
 }

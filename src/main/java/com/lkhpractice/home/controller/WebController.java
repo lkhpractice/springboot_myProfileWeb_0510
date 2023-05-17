@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.lkhpractice.home.dao.IDao;
 import com.lkhpractice.home.dto.BoardDto;
+import com.lkhpractice.home.dto.Criteria;
 import com.lkhpractice.home.dto.MemberDto;
+import com.lkhpractice.home.dto.PageDto;
 
 @Controller
 public class WebController {
@@ -171,13 +173,15 @@ public class WebController {
 	}
 	
 	@RequestMapping(value = "/list")
-	public String list(Model model) {
+	public String list(Model model, Criteria criteria) {
 		
 		IDao dao = sqlSession.getMapper(IDao.class);
 		
-		List<BoardDto> boardDtos = dao.questionListDao();
-				
-		model.addAttribute("boardDtos", boardDtos);
+		int total = dao.boardAllCountDao();	// 모든 글의 개수
+		
+		PageDto pageDto = new PageDto(criteria, total);
+		
+		model.addAttribute("pageMaker", pageDto);
 		
 		return "list";
 	}

@@ -64,12 +64,25 @@
 										</td>
 									</tr>
 									</c:forEach>
-									</table>
 									<tr>
 										<td colspan="5" align="right">
 											<input class="content_btn01" type="button" value="글쓰기" onclick="script:window.location.href='question'">
 										</td>
 									</tr>
+									<tr>
+										<td colspan="5">
+											<c:if test="${pageMaker.prev }">
+												<a href="list?pageNum=${pageMaker.startPage-5 }">◀</a>&nbsp;&nbsp;&nbsp;
+											</c:if>
+											<c:forEach begin="${pageMaker.startPage }" end="${pageMaker.endPage }" var="num">
+												${num }&nbsp;&nbsp;&nbsp;
+											</c:forEach>
+											<c:if test="${pageMaker.next }">
+												<a href="list?pageNum=${pageMaker.startPage+5 }">▶</a>
+											</c:if>
+										</td>
+									</tr>
+								</table>
 							</center>
 						</td>
 					</tr>
