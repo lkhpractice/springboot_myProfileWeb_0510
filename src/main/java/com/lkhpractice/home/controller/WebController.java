@@ -66,6 +66,22 @@ public class WebController {
 		return "question";
 	}
 	
+	@RequestMapping(value = "/questionOk")
+	public String questionOk(HttpServletRequest request) {
+		
+		String bid = request.getParameter("bid");
+		String bpw = request.getParameter("bpw");
+		String bname = request.getParameter("bname");
+		String bcontent = request.getParameter("bcontent");
+		String bemail = request.getParameter("bemail");
+		
+		IDao dao = sqlSession.getMapper(IDao.class);
+		
+		dao.questionWriteDao(bid, bname, bcontent, bemail);
+		
+		return "redirect:list";
+	}
+	
 	@RequestMapping(value = "/joinOk")
 	public String joinOk(HttpServletRequest request, Model model) {
 		
@@ -154,22 +170,6 @@ public class WebController {
 		model.addAttribute("memberDto", dao.getMemberInfo(mid)); // 수정이 된 후 회원 정보
 		
 		return "modifyOk";
-	}
-	
-	@RequestMapping(value = "/questionOk")
-	public String questionOk(HttpServletRequest request) {
-		
-		String bid = request.getParameter("bid");
-		String bpw = request.getParameter("bpw");
-		String bname = request.getParameter("bname");
-		String bcontent = request.getParameter("bcontent");
-		String bemail = request.getParameter("bemail");
-		
-		IDao dao = sqlSession.getMapper(IDao.class);
-		
-		dao.questionWriteDao(bid, bname, bcontent, bemail);
-		
-		return "redirect:list";
 	}
 	
 	@RequestMapping(value = "/list")
